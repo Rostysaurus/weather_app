@@ -1,7 +1,13 @@
 @import "../../styles/colours.scss";
 
 .main {
-  width: 100%;
+  max-width: 1080px;
+  margin: 20px auto;
   height: 100vh;
-  background-color: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
 }

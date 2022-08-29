@@ -1,8 +1,12 @@
-import { Fragment } from 'react';
+import "./app.scss"
 import Home from './pages/home/Home';
 
 function App() {
-  return <Home/>
+  return (
+    <div className='app'>
+      <Home/>
+    </div>
+  )
 }
 
 export default App;

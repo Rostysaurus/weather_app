@@ -1,0 +1,29 @@
+@import "../../../styles/colours.scss";
+
+
+
+
+
+  .searchForm {
+    width: 100%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    input, button {
+      border: 1px solid transparent;
+      border-radius: 3px;
+      padding: 15px;
+      width: 100%;
+    }
+
+    input {
+      background-color: $textWhite;
+      margin: 0 5px;
+    }
+
+    button {
+      background-color: $red;
+      width: 60px;
+    }
+  }

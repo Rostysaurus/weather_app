@@ -1,7 +1,33 @@
 @import "../../styles/colours.scss";
 
 .topbar {
-  width: 100%;
-  height: 100px;
-  background-color: crimson;
+  min-height: 100px;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  overflow: hidden;
+  background-color: #14191e;
+  color: $textWhite;
+
+  li, h1 {
+    cursor: pointer;
+  }
+
+  .left {
+    flex: .5;
+
+    h1 {
+      font-size: 50px;
+      font-weight: 900;
+    }
+  }
+
+  .mid {
+    flex: 1;
+  }
+
+  .right {
+  }
 }

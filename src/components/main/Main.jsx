@@ -1,10 +1,18 @@
 import "./main.scss"
-import { FaSun } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
+import { useContext, useState } from "react";
+import { SearchContext } from "../../context/searchContext/searchContext";
+import SearchForm from "../UI/searchForm/SearchForm";
+import WeatherCard from "../UI/weatherCard/WeatherCard";
 
 export default function Main() {
+
+  const {weatherData, isFetching, error} = useContext(SearchContext)
+
   return (
     <div className="main">
-      Welcome to the Weather App <FaSun/>
+        <SearchForm/>
+        {weatherData && <WeatherCard/>}
     </div>
   )
 }
