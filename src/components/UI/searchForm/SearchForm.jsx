@@ -8,7 +8,7 @@ import './searchForm.scss'
 export default function SearchForm() {
 
   // Context
-  const {dispatch, selectedCity} = useContext(SearchContext)
+  const {dispatch, selectedCity, selectedLanguage} = useContext(SearchContext)
 
   // State
   const [input, setInput] = useState("")
@@ -30,7 +30,7 @@ export default function SearchForm() {
             <input
               value={input}
               type="text"
-              placeholder='Search for a city'
+              placeholder={selectedLanguage === `en` ? `Search` : `Suche`}
               onChange={e => setInput(e.target.value)}
               />
             <button><FaSearch/></button>

@@ -4,5 +4,6 @@
 body {
   // margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: $background;
+  // background-color: $background;
+  background-image: linear-gradient(to top, $background 0%, #537895 100%);
 }

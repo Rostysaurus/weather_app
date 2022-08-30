@@ -9,7 +9,13 @@
     padding: 0 20px;
     font-size: 20px;
     font-weight: 400;
-    &.selected {
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+
+    &.selected, &:hover{
       color: $red;
     }
   }

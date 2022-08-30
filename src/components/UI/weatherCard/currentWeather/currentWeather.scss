@@ -1,1 +1,73 @@
 @import "../../../../styles/colours.scss";
+
+.current {
+  display: flex;
+  color: $background;
+  text-align: center;
+  padding: 20px;
+
+  table {
+    padding: 10px;
+    border-right: 1px solid $background;
+    thead {
+      padding: 35px;
+
+      tr {
+
+        td {
+
+          h2 {
+            font-weight: lighter;
+          }
+        }
+      }
+    }
+
+    tbody {
+      display: flex;
+      justify-content: center;
+
+      tr {
+
+        .left {
+
+          p {
+            font-weight: normal;
+            font-size: 30px;
+          }
+        }
+
+        .right {
+          text-align: left;
+
+          h1 {
+            font-size: 50px;
+            font-weight: normal;
+          }
+
+          .container {
+
+            .IconText {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin: 10px 0;
+
+              .faIcon {
+                font-size: 20px;
+              }
+            }
+
+          }
+        }
+        td {
+          padding: 20px;
+
+          img {
+            height: 64px;
+          }
+        }
+      }
+    }
+  }
+}

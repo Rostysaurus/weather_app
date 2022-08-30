@@ -1,1 +1,19 @@
 @import "../../../styles/colours.scss";
+
+.locationInfo {
+  text-align: center;
+
+  h1, h2 {
+    color: $textWhite;
+    padding: 10px 0;
+  }
+
+  h1 {
+    font-weight: lighter;
+    font-size: 40px;
+  }
+
+  h2 {
+    font-weight: lighter;
+  }
+}

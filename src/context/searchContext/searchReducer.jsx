@@ -4,7 +4,7 @@ const SearchReducer = (state, action) => {
       return {
         ...state,
         isFetching: true,
-        error: ""
+        error: false
       };
       case "FETCHING_SUCCESS":
       return {
@@ -12,15 +12,17 @@ const SearchReducer = (state, action) => {
         weatherData: action.payload,
         isFetching: false,
         selectedCity: state.selectedCity,
-        error: ""
+        error: false,
+        errorMessage: "",
       };
       case "FETCHING_FAILURE":
       return {
         ...state,
         isFetching: false,
-        error: action.payload,
-        weatherData: null,
-        selectedCity: "",
+        error: true,
+        errorMessage: action.payload,
+        // weatherData: null,
+        // // selectedCity: "",
 
       };
       case "SELECT_CITY":

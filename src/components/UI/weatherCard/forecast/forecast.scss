@@ -1,1 +1,53 @@
 @import "../../../../styles/colours.scss";
+
+.forecast {
+  display: flex;
+  color: $background;
+  text-align: center;
+  padding: 20px;
+
+  table {
+    padding: 10px;
+
+    thead {
+
+      tr {
+
+        td {
+
+          h2 {
+            font-weight: lighter;
+          }
+        }
+      }
+    }
+
+    tbody {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      tr {
+
+        td {
+          padding: 10px;
+
+          h4 {
+            font-weight: lighter;
+          }
+
+          p {
+
+            .max {
+              color: $red;
+            }
+
+            .min {
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
