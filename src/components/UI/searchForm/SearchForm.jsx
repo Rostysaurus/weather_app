@@ -1,14 +1,13 @@
 import { useContext, useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
-import { searchCityForecast } from '../../../context/searchContext/apiCalls'
-import { fetchingFailure, fetchingStart, fetchingSuccess, selectCity } from '../../../context/searchContext/searchActions'
+import { selectCity } from '../../../context/searchContext/searchActions'
 import { SearchContext } from '../../../context/searchContext/searchContext'
 import './searchForm.scss'
 
 export default function SearchForm() {
 
   // Context
-  const {dispatch, selectedCity, selectedLanguage} = useContext(SearchContext)
+  const {dispatch, selectedLanguage} = useContext(SearchContext)
 
   // State
   const [input, setInput] = useState("")
@@ -24,6 +23,7 @@ export default function SearchForm() {
   return (
 
           <form
+            data-testid="searchForm"
             className='searchForm'
             onSubmit={formSubmitHandler}
             >

@@ -1,4 +1,4 @@
-import { Fragment, useContext } from "react"
+import { useContext } from "react"
 import { FaTint, FaUmbrella, FaWind } from "react-icons/fa"
 import { SearchContext } from "../../../../context/searchContext/searchContext"
 import { currentConditions } from "../../../Translation/currentConditions"

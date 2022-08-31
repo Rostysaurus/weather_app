@@ -10,6 +10,9 @@ export default function Topbar() {
     window.location.reload()
   }
 
+  const screenWidth = window.innerWidth;
+  console.log(screenWidth)
+
   return (
     <div data-testid="topbar" className="topbar">
       <div
@@ -22,11 +25,11 @@ export default function Topbar() {
         <FaCloudRain className='icon'/>
         <FaBolt className='icon'/>
       </div>
-      <div
-        data-testid="mid"
-        className="mid">
-       <PopularCities/>
-      </div>
+        <div
+          data-testid="mid"
+          className={`mid ${screenWidth <= 390 && `mobile`}`}>
+        <PopularCities/>
+        </div>
       <div
         data-testid="right"
         className="right">
@@ -35,3 +38,5 @@ export default function Topbar() {
     </div>
   )
 }
+
+// className={`${city === selectedCity ? `selected` : null}`}

@@ -5,16 +5,5 @@ body {
   margin: 0;
   height:100vh;
   font-family: 'Roboto', sans-serif;
-  // background-color: $background;
-  // background-image: linear-gradient(to top, $background 0%, #537895 100%);
   letter-spacing: 1px;
-  // display:flex;
-  // flex-direction:column;
-  // position: relative;
-
-  @media (min-width: 760px) {
-    max-width: 100vw;
-    min-height: 100vh;
-  }
-
 }

@@ -9,8 +9,6 @@ export default function WeatherCard() {
 
   const {weatherData, isFetching, error, errorMessage, selectedLanguage} = useContext(SearchContext)
 
-  console.log(error)
-
   return (
     <Fragment>
       <LocationInfo/>

@@ -1,7 +1,7 @@
 import { Fragment, useContext } from "react"
 import { FaTemperatureHigh, FaTemperatureLow, FaUmbrella } from "react-icons/fa"
 import { SearchContext } from "../../../../context/searchContext/searchContext"
-import { getWeekDay } from "../../hooks/dateConverters/getWeekDay"
+import { getWeekDay } from "../../functions/converters/getWeekDay"
 import "./forecast.scss"
 
 export default function Forecast() {

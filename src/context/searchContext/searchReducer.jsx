@@ -1,16 +1,9 @@
 const SearchReducer = (state, action) => {
   switch (action.type) {
-    case "FETCHING_START":
-      return {
-        ...state,
-        isFetching: true,
-        error: false
-      };
       case "FETCHING_SUCCESS":
       return {
         ...state,
         weatherData: action.payload,
-        isFetching: false,
         selectedCity: state.selectedCity,
         error: false,
         errorMessage: "",
@@ -18,7 +11,6 @@ const SearchReducer = (state, action) => {
       case "FETCHING_FAILURE":
       return {
         ...state,
-        isFetching: false,
         error: true,
         errorMessage: action.payload,
         // weatherData: null,

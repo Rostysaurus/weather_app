@@ -1,11 +1,9 @@
 import { createContext, useReducer, useEffect } from "react"
-import { countryNameToGerman } from "../../components/Translation/countryNameConverter"
 import { searchCityForecast } from "./apiCalls"
 import SearchReducer from "./searchReducer"
 
 const INITIAL_STATE = {
     weatherData: null,
-    isFetching: false,
     error: false,
     errorMessage: "",
     selectedCity: "Berlin",
@@ -26,7 +24,6 @@ export const SearchContextProvider = ({children}) => {
     <SearchContext.Provider
       value={{
         weatherData: state.weatherData,
-        isFetching: state.isFetching,
         error: state.error,
         errorMessage: state.errorMessage,
         selectedCity: state.selectedCity,

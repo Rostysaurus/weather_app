@@ -1,15 +1,14 @@
 import { Fragment, useContext, useEffect, useState } from "react"
 import { FaFrown, FaMapMarkerAlt } from "react-icons/fa"
 import { SearchContext } from "../../../context/searchContext/searchContext"
-import { countryConverter, countryNameToGermanTest } from "../../Translation/countryNameConverter"
-import { getFullDate } from "../hooks/dateConverters/getFullDate"
+import { getFullDate } from "../functions/converters/getFullDate"
 import "./locationInfo.scss"
 
 export default function LocationInfo() {
-  const {weatherData, isFetching, error, selectedLanguage, errorMessage} = useContext(SearchContext)
+  const {weatherData, error, selectedLanguage, errorMessage} = useContext(SearchContext)
   const [countryInGerman, setCountryInGerman] = useState("")
 
-  const {name, country, localtime, tz_id} = weatherData.location
+  const {name, country, localtime} = weatherData.location
 
   useEffect(() => {
     if (selectedLanguage === "de") {
@@ -35,12 +34,6 @@ export default function LocationInfo() {
     countryNameToGerman(country)
   }
 }, [weatherData])
-
-// const suka = async () => {
-//   const data = await countryConverter(country)
-//   console.log(data)
-// }
-// console.log(countryConverter(country).then((data) => {return data}))
 
   return (
     <div className="locationInfo">

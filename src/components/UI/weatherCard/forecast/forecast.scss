@@ -51,3 +51,16 @@
     }
   }
 }
+
+
+@media (max-width: 390px) {
+  .forecast {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+
+      table {
+        border-top: 1px solid $background;
+        padding-top: 20px;
+      }
+  }
+}

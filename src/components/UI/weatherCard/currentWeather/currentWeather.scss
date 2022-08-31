@@ -72,3 +72,28 @@
     }
   }
 }
+
+@media (max-width: 390px) {
+  .current {
+
+    table {
+      border-right: none;
+
+      thead {
+        padding: 35px;
+
+        tr {
+
+          td {
+
+            h2 {
+              font-size: 35px;
+              font-weight: lighter;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

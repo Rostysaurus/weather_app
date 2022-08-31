@@ -1,7 +1,3 @@
-export const fetchingStart = () => ({
-  type: "FETCHING_START"
-})
-
 export const fetchingSuccess = (data) => ({
   type: "FETCHING_SUCCESS",
   payload: data
