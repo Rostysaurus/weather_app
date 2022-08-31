@@ -10,4 +10,9 @@
   justify-content: center;
   gap: 20px;
 
+  @media (min-width: 760px) {
+    max-width: 100vw;
+    // height: calc(70vh - 100px);
+  }
+
 }

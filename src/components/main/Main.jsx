@@ -10,7 +10,7 @@ export default function Main() {
   const {weatherData, isFetching, error} = useContext(SearchContext)
 
   return (
-    <div className="main">
+    <div data-testid="main" className="main">
         <SearchForm/>
         {weatherData && <WeatherCard/>}
     </div>

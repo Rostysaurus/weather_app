@@ -1,5 +1,11 @@
 @import "../../index.scss";
 
 .home {
+  // display: grid;
+  // grid-template-rows: auto 1fr auto;
+  margin: 0;
+  overflow: hidden;
+  min-height: 100vh;
+  background-image: linear-gradient(to top, $background 0%, #537895 100%);
 
 }

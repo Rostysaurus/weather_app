@@ -16,7 +16,7 @@ export default function CurrentWeather() {
         <thead>
           <tr>
             <td>
-              <h2>{currentConditions[`${selectedLanguage}`]}</h2>
+              <h2>{currentConditions[`${selectedLanguage}`]}:</h2>
             </td>
           </tr>
         </thead>

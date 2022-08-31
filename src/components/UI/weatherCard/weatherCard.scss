@@ -12,6 +12,13 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   font-weight: lighter;
 
+  // @media (min-width: 760px) {
+  //   max-width: 80%;
+  //   overflow: hidden;
+  //   flex-wrap: wrap;
+  //   // height: calc(70vh - 100px);
+  // }
+
     p {
       color: $background;
     }

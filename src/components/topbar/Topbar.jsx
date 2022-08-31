@@ -11,8 +11,9 @@ export default function Topbar() {
   }
 
   return (
-    <div className="topbar">
+    <div data-testid="topbar" className="topbar">
       <div
+        data-testid="left"
         className="left"
         onClick={homeHandler}
         >
@@ -21,10 +22,14 @@ export default function Topbar() {
         <FaCloudRain className='icon'/>
         <FaBolt className='icon'/>
       </div>
-      <div className="mid">
+      <div
+        data-testid="mid"
+        className="mid">
        <PopularCities/>
       </div>
-      <div className="right">
+      <div
+        data-testid="right"
+        className="right">
         <Languages/>
       </div>
     </div>

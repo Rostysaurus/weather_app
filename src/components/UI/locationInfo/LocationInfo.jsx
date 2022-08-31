@@ -1,6 +1,7 @@
 import { Fragment, useContext, useEffect, useState } from "react"
 import { FaFrown, FaMapMarkerAlt } from "react-icons/fa"
 import { SearchContext } from "../../../context/searchContext/searchContext"
+import { countryConverter, countryNameToGermanTest } from "../../Translation/countryNameConverter"
 import { getFullDate } from "../hooks/dateConverters/getFullDate"
 import "./locationInfo.scss"
 
@@ -35,8 +36,11 @@ export default function LocationInfo() {
   }
 }, [weatherData])
 
-
-  console.log(countryInGerman)
+// const suka = async () => {
+//   const data = await countryConverter(country)
+//   console.log(data)
+// }
+// console.log(countryConverter(country).then((data) => {return data}))
 
   return (
     <div className="locationInfo">
