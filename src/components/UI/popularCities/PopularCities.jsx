@@ -1,28 +1,34 @@
-import "./popularCities.scss"
-import { useContext, useState } from "react"
-import { SearchContext } from "../../../context/searchContext/searchContext"
-import { selectCity } from "../../../context/searchContext/searchActions"
+import "./popularCities.scss";
+import { useContext, useEffect, useState } from "react";
+import { SearchContext } from "../../../context/searchContext/searchContext";
+import { selectCity } from "../../../context/searchContext/searchActions";
+import { germanStates } from "../../../utils/germanStates";
 
 export default function PopularCities() {
+	const { dispatch, selectedCity } = useContext(SearchContext);
+	const popularCities = ["Berlin", "Hamburg", "Bayern", "Nordrhein-Westfalen"];
 
-  const {dispatch, selectedCity} = useContext(SearchContext)
-  const popularCities = ["Berlin", "London", "Paris", "Madrid"]
+	useEffect(() => {
+		dispatch(
+			selectCity({
+				state: "All",
+				lat: 51.1638175,
+				lon: 10.4478313,
+			})
+		);
+	}, []);
 
-  // Handlers
-  const selectCityHandler = (e) => {
-    e.preventDefault()
-    dispatch(selectCity(e.target.innerText))
-  }
-  return (
-    <ul className='cities'>
-    {popularCities.map((city, index) => (
-      <li
-        className={`${city === selectedCity ? `selected` : null}`}
-        key={index}
-        onClick={selectCityHandler}
-        >
-          {city}</li>
-    ))}
-  </ul>
-  )
+	return (
+		<ul className="cities">
+			{germanStates.map((state, index) => (
+				<li
+					className={`${state === selectedCity ? `selected` : null}`}
+					key={index}
+					onClick={() => dispatch(selectCity(state))}
+				>
+					{state.state}
+				</li>
+			))}
+		</ul>
+	);
 }

@@ -1,17 +1,23 @@
-import { fetchingFailure, fetchingSuccess } from "./searchActions"
+import { capitalize } from "../../utils/capitalize";
+import { fetchingFailure, fetchingSuccess } from "./searchActions";
 
-export const searchCityForecast = async (dispatch, cityInput, languageInput) => {
+export const searchCityForecast = async (
+	dispatch,
+	cityInput,
+	languageInput
+) => {
+	const aqUrl = `https://api.openaq.org/v2/latest?limit=100&page=1&offset=0&sort=desc&radius=1000&country_id=de&city=${capitalize(
+		cityInput.state
+	)}&order_by=lastUpdated&dumpRaw=false`;
 
-  const searchUrl = `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_KEY}&q=${cityInput}&lang=${languageInput}&days=7`
+	const res = await fetch(aqUrl);
+	const data = await res.json();
 
-  const res = await fetch(searchUrl)
-  const data = await res.json()
+	if (!res.ok) {
+		dispatch(fetchingFailure(data.error));
+	}
 
-  if (!res.ok) {
-    dispatch(fetchingFailure(data.error))
-  }
-
-  if (res.ok) {
-    dispatch(fetchingSuccess(data))
-  }
-}
+	if (res.ok) {
+		dispatch(fetchingSuccess(data));
+	}
+};
